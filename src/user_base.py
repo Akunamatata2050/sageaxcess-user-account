@@ -165,9 +165,9 @@ def login(data):
 
 def update_login_data(user):
     user["LastLoginTime"]=str(arrow.utcnow())
-    if user["Email"][-10:].lower() == "@gmail.com"
+    if user["Email"][-10:].lower() == "@gmail.com":
         user["gmail"] = True
-    else
+    else:
         user["gmail"] = False
     request_headers = {}
     for k, v in request.headers.items():
